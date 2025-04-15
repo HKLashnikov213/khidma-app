@@ -1,0 +1,96 @@
+.home-page {
+    --hero-gradient: linear-gradient(135deg, var(--primary-500) 0%, var(--accent-500) 100%);
+    --section-spacing: 8rem;
+  }
+  
+  .quantum-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: var(--hero-gradient);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--neutral-100);
+    opacity: 0.9;
+  }
+  
+  .quantum-services {
+    padding: var(--section-spacing) 2rem;
+    background: var(--neutral-100);
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .quantum-map-section {
+    height: 80vh;
+    position: relative;
+    background: var(--neutral-50);
+    margin: var(--section-spacing) 0;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] .hero-content {
+    direction: rtl;
+  }
+  
+  [dir="rtl"] .section-title {
+    font-family: var(--font-arabic);
+  }
+  
+  /* Animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-title {
+      animation: text-float 6s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes text-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .quantum-services {
+      padding: 4rem 1rem;
+    }
+  }

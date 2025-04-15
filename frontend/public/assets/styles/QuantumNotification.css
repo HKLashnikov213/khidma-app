@@ -1,0 +1,84 @@
+.quantum-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 16px;
+    width: 320px;
+    box-shadow: 0 8px 32px rgba(15, 61, 62, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10000;
+  }
+  
+  .rtl.quantum-notification {
+    right: auto;
+    left: 20px;
+  }
+  
+  .notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .message-container {
+    flex-grow: 1;
+  }
+  
+  .coherence-badge {
+    background: var(--primary-500);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  
+  .message-text {
+    margin: 0;
+    color: var(--neutral-900);
+    line-height: 1.4;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--neutral-700);
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: var(--accent-500);
+  }
+  
+  .quantum-timeline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(15, 61, 62, 0.1);
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+  }
+  
+  .timeline-progress {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-300);
+    transform-origin: left;
+  }
+  
+  /* RTL Adjustments */
+  [dir='rtl'] .quantum-timeline {
+    direction: ltr;
+  }
+  
+  [dir='rtl'] .timeline-progress {
+    transform-origin: right;
+  }

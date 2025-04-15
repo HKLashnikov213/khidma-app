@@ -1,0 +1,137 @@
+.auth-form {
+    --input-bg: rgba(15, 61, 62, 0.05);
+    --input-border: 1px solid rgba(15, 61, 62, 0.1);
+    --primary-hover: rgba(15, 61, 62, 0.8);
+    --error-color: #FF6B6B;
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--input-bg);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border: var(--input-border);
+  }
+  
+  .input-wrapper:hover {
+    border-color: var(--primary-300);
+  }
+  
+  .input-icon {
+    font-size: 1.2rem;
+    color: var(--neutral-700);
+    margin-right: 1rem;
+  }
+  
+  .country-code {
+    padding: 0 0.5rem;
+    color: var(--neutral-700);
+    font-weight: 500;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    color: var(--neutral-900);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    padding-left: 0.5rem;
+  }
+  
+  .otp-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .resend-btn {
+    background: none;
+    border: none;
+    color: var(--primary-500);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .resend-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: var(--primary-hover);
+  }
+  
+  .security-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--neutral-700);
+    opacity: 0.8;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] .input-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  
+  [dir="rtl"] .country-code {
+    padding: 0 0.5rem;
+    order: 1;
+  }
+  
+  [dir="rtl"] .error-message {
+    padding-right: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .input-wrapper {
+      padding: 0.5rem;
+    }
+    
+    input {
+      font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+      padding: 1rem;
+    }
+  }
