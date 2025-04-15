@@ -3,7 +3,7 @@ import { useQuantum } from '../../context/QuantumContext';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import QuantumLoader from '../../components/QuantumLoader';
+import QuantumLoader from '../../components/QuantumLoader/QuantumLoader';
 import AuthForm from '../../components/AuthForm';
 
 const AuthPage = () => {
