@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KhidmaDZ - Profil Prestataire</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class='logo'>KhidmaDZ</div>
+    <ul class='nav-links'>
+      <li><a href='index.html'>Accueil</a></li>
+      <li><a href='dashboard.html'>Dashboard</a></li>
+      <li><a href='missions.html'>Missions</a></li>
+    </ul>
+    <select id='lang-switcher'>
+      <option value='fr' selected>FR</option>
+      <option value='ar'>AR</option>
+      <option value='en'>EN</option>
+    </select>
+  </nav>
+
+  <section class='profile-section'>
+    <div class='auth-container'>
+      <h2>Création / Mise à Jour du Profil Prestataire</h2>
+      <form id='provider-profile-form'>
+        <input type='text' id='provider-name' placeholder='Nom complet' required>
+        <input type='email' id='provider-email' placeholder='Email' required>
+        <input type='tel' id='provider-phone' placeholder='Téléphone' required>
+        <textarea id='provider-bio' placeholder='Description / Compétences...' rows='4'></textarea>
+        <label for='provider-photo'>Photo de vos travaux :</label>
+        <input type='file' id='provider-photo' accept='image/*'>
+        <!-- Menu déroulant multi-sélection pour que le prestataire choisisse les services qu'il propose -->
+        <select class='service-dropdown' id='provider-services' multiple>
+          <option value=''>-- Sélectionnez vos services --</option>
+        </select>
+        <button type='submit' class='btn'>Enregistrer le Profil</button>
+      </form>
+      <p>Les clients pourront noter vos prestations après intervention.</p>
+    </div>
+  </section>
+
+  <script src='js/main.js'></script>
+  <script src='js/services.js'></script>
+</body>
+</html>

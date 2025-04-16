@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KhidmaDZ - Missions</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class='logo'>KhidmaDZ</div>
+    <ul class='nav-links'>
+      <li><a href='index.html'>Accueil</a></li>
+      <li><a href='dashboard.html'>Dashboard</a></li>
+      <li><a href='ajouter-mission.html'>Ajouter une Mission</a></li>
+    </ul>
+    <select id='lang-switcher'>
+      <option value='fr' selected>FR</option>
+      <option value='ar'>AR</option>
+      <option value='en'>EN</option>
+    </select>
+  </nav>
+
+  <section class='missions-list'>
+    <div class='container'>
+      <h2 class='section-title'>Missions Proposées</h2>
+      <!-- Section de filtrage -->
+      <div class='filter-bar'>
+        <input type='text' id='filter-keyword' placeholder='Rechercher...'>
+        <input type='text' id='filter-location' placeholder='Localisation'>
+        <button id='filter-btn' class='btn'>Filtrer</button>
+      </div>
+      <!-- Liste simulée des missions -->
+      <div id='missions-container'>
+        <div class='mission-item oriental-border'>
+          <h3 class='oriental-accent'>Mission 1</h3>
+          <p>Description courte de la mission.</p>
+          <p><strong>Localisation:</strong> Alger</p>
+          <p><strong>Budget:</strong> 15000 DA</p>
+        </div>
+        <div class='mission-item oriental-border'>
+          <h3 class='oriental-accent'>Mission 2</h3>
+          <p>Description courte de la mission.</p>
+          <p><strong>Localisation:</strong> Oran</p>
+          <p><strong>Budget:</strong> 20000 DA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src='js/main.js'></script>
+</body>
+</html>

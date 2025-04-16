@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KhidmaDZ - Ajouter une Mission</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class='logo'>KhidmaDZ</div>
+    <ul class='nav-links'>
+      <li><a href='index.html'>Accueil</a></li>
+      <li><a href='dashboard.html'>Dashboard</a></li>
+    </ul>
+    <select id='lang-switcher'>
+      <option value='fr' selected>FR</option>
+      <option value='ar'>AR</option>
+      <option value='en'>EN</option>
+    </select>
+  </nav>
+
+  <section class='auth-container'>
+    <h2>Ajouter une Mission</h2>
+    <form id='mission-form'>
+      <input type='text' id='mission-title' placeholder='Titre de la mission' required>
+      <textarea id='mission-desc' placeholder='Description de la mission' rows='4' required></textarea>
+      <!-- Menu déroulant avec les 1000 services pour une demande précise -->
+      <select class='service-dropdown' id='mission-service'>
+          <option value=''>-- Choisissez un service --</option>
+      </select>
+      <input type='text' id='mission-location' placeholder='Localisation' required>
+      <input type='number' id='mission-price' placeholder='Budget souhaité' required>
+      <button type='submit' class='btn'>Envoyer la Mission</button>
+    </form>
+  </section>
+
+  <script src='js/main.js'></script>
+  <script src='js/services.js'></script>
+</body>
+</html>

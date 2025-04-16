@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KhidmaDZ - Authentification</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation identique -->
+  <nav class="navbar">
+    <div class="logo">KhidmaDZ</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+    </ul>
+    <select id="lang-switcher">
+      <option value="fr" selected>FR</option>
+      <option value="ar">AR</option>
+      <option value="en">EN</option>
+    </select>
+  </nav>
+
+  <!-- Formulaire d'authentification -->
+  <div class="auth-container">
+    <form id="auth-form">
+      <h2>Connexion / Inscription</h2>
+      <input type="text" id="name" placeholder="Nom (pour inscription)">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Téléphone">
+      <input type="password" id="password" placeholder="Mot de passe" required>
+      <select id="profile-type">
+        <option value="client">Client</option>
+        <option value="provider">Prestataire</option>
+      </select>
+      <button type="submit" class="btn">Continuer</button>
+      <button type="button" id="otp-btn" class="btn-outline">Utiliser OTP</button>
+    </form>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

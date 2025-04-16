@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>KhidmaDZ - Profil Client</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class='logo'>KhidmaDZ</div>
+    <ul class='nav-links'>
+      <li><a href='index.html'>Accueil</a></li>
+      <li><a href='dashboard.html'>Dashboard</a></li>
+      <li><a href='missions.html'>Missions</a></li>
+    </ul>
+    <select id='lang-switcher'>
+      <option value='fr' selected>FR</option>
+      <option value='ar'>AR</option>
+      <option value='en'>EN</option>
+    </select>
+  </nav>
+
+  <section class='profile-section'>
+    <div class='auth-container'>
+      <h2>Création / Mise à Jour du Profil Client</h2>
+      <form id='client-profile-form'>
+        <input type='text' id='client-name' placeholder='Nom complet' required>
+        <input type='email' id='client-email' placeholder='Email' required>
+        <input type='tel' id='client-phone' placeholder='Téléphone' required>
+        <textarea id='client-bio' placeholder='Description...' rows='4'></textarea>
+        <button type='submit' class='btn'>Enregistrer le Profil</button>
+      </form>
+      <h3>Ajouter une Mission</h3>
+      <a href='ajouter-mission.html' class='btn-outline'>Ajouter une Mission</a>
+    </div>
+  </section>
+
+  <script src='js/main.js'></script>
+</body>
+</html>

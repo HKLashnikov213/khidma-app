@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajout de Mission & Compétences</title>
+  <script src="js/servicesData.js"></script>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f3f3f3; padding: 20px; }
+    select, input, textarea, button {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .form-block {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-block">
+    <h2>Client - Ajouter une Mission</h2>
+    <select id="secteur"></select>
+    <select id="sousSecteur"></select>
+    <select id="specialite"></select>
+
+    <input type="text" id="budget" placeholder="Prix souhaité (DA)">
+    <input type="text" id="localisation" placeholder="Localisation ou GPS (ex: Alger ou 36.7,3.1)">
+    <textarea id="description" rows="5" placeholder="Description de la mission..."></textarea>
+    <button onclick="soumettreMission()">Soumettre la mission</button>
+  </div>
+
+  <div class="form-block">
+    <h2>Prestataire - Ajouter une Compétence</h2>
+    <select id="secteurP"></select>
+    <select id="sousSecteurP"></select>
+    <select id="specialiteP"></select>
+    <button onclick="ajouterCompetence()">Ajouter à mon profil</button>
+  </div>
+
+  <script>
+    const secteur = document.getElementById('secteur');
+    const sousSecteur = document.getElementById('sousSecteur');
+    const specialite = document.getElementById('specialite');
+
+    const secteurP = document.getElementById('secteurP');
+    const sousSecteurP = document.getElementById('sousSecteurP');
+    const specialiteP = document.getElementById('specialiteP');
+
+    function chargerSelects(source, ss, sp, data) {
+      source.innerHTML = '<option>Choisir un secteur</option>';
+      for (let cat in data) {
+        source.innerHTML += <option value="\">\</option>;
+      }
+
+      source.onchange = () => {
+        ss.innerHTML = '<option>Choisir un sous-secteur</option>';
+        sp.innerHTML = '<option>Choisir une spécialité</option>';
+        for (let sub in data[source.value]) {
+          ss.innerHTML += <option value="\">\</option>;
+        }
+      };
+
+      ss.onchange = () => {
+        sp.innerHTML = '<option>Choisir une spécialité</option>';
+        const list = data[source.value][ss.value];
+        if (list) {
+          for (let s of list) {
+            sp.innerHTML += <option>\</option>;
+          }
+        }
+      };
+    }
+
+    function soumettreMission() {
+      alert("Mission enregistrée avec les données sélectionnées.");
+    }
+
+    function ajouterCompetence() {
+      alert("Compétence ajoutée à votre profil.");
+    }
+
+    window.onload = () => {
+      chargerSelects(secteur, sousSecteur, specialite, servicesData);
+      chargerSelects(secteurP, sousSecteurP, specialiteP, servicesData);
+    };
+  </script>
+</body>
+</html>
